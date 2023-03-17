@@ -6,6 +6,17 @@ body{
     max-width: 100%;
 }
 
+#start-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
 main{
     position: relative;
     display: flex;
@@ -53,6 +64,12 @@ main{
 }
 
 .player{
+    position: absolute;
+    width: 40px;
+    transition: 0.5s;
+}
+
+.dar{
     position: absolute;
     width: 40px;
     transition: 0.5s;

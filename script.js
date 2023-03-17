@@ -3,6 +3,7 @@ let max_x;
 const img_w =40;
 const img_h =52;
 let scene_w = 80;
+let scene_id = 1;
 
 
 function createScene(){
@@ -28,8 +29,15 @@ function createScene(){
     damir.src = 'img/players/damir.png';
     damir.classList.add('player');
     set_player(1,max_y-10,damir);
+
+    let dar = document.createElement('img');
+    dar.src = 'img/players/daria.png';
+    dar.classList.add('dar');
+    set_player(50,max_y-17,dar);
+
     gravity(damir);
     document.querySelector('main').append(damir);
+    document.querySelector('main').append(dar);
     //document.querySelector('main').style.width = 20*60+'px;';
     //document.querySelector('main').style.height = 'auto';
     document.querySelector('main').setAttribute('style','width:'+20*scene_w+'px; height:auto;')
@@ -38,10 +46,81 @@ function createScene(){
     render(19,14,'glass');
     render(18,15,'glass');
     render(19,15,'glass');
-    render(4,24,'brick');
+    render(4,max_y-8,'brick');
     //render(4,23,'brick');
     //render(4,22,'brick');
-    
+    render(49,max_y-8,'tnt_side');
+
+    render(50,max_y-8,'stonebricksmooth');
+    render(51,max_y-8,'stonebricksmooth');
+    render(52,max_y-8,'stonebricksmooth');
+    render(53,max_y-8,'stonebricksmooth');
+    render(54,max_y-8,'stonebricksmooth');
+    render(50,max_y-9,'stonebricksmooth');
+    render(51,max_y-9,'stonebricksmooth');
+    render(52,max_y-9,'stonebricksmooth');
+    render(53,max_y-9,'stonebricksmooth');
+    render(54,max_y-9,'stonebricksmooth');
+    render(50,max_y-10,'stonebricksmooth');
+    render(51,max_y-10,'stonebricksmooth');
+    render(52,max_y-10,'stonebricksmooth');
+    render(53,max_y-10,'stonebricksmooth');
+    render(54,max_y-10,'stonebricksmooth');
+
+    render(50,max_y-11,'stonebricksmooth');
+    render(51,max_y-11,'stonebricksmooth');
+    render(52,max_y-11,'stonebricksmooth');
+    render(53,max_y-11,'stonebricksmooth');
+    render(54,max_y-11,'stonebricksmooth');
+
+    render(50,max_y-12,'stonebricksmooth');
+    render(51,max_y-12,'stonebricksmooth');
+    render(52,max_y-12,'stonebricksmooth');
+    render(53,max_y-12,'stonebricksmooth');
+    render(54,max_y-12,'stonebricksmooth');
+
+    render(50,max_y-13,'stonebricksmooth');
+    render(51,max_y-13,'stonebricksmooth');
+    render(52,max_y-13,'stonebricksmooth');
+    render(53,max_y-13,'stonebricksmooth');
+    render(54,max_y-13,'stonebricksmooth');
+
+    render(50,max_y-14,'stonebricksmooth');
+    render(51,max_y-14,'stonebricksmooth');
+    render(52,max_y-14,'stonebricksmooth');
+    render(53,max_y-14,'stonebricksmooth');
+    render(54,max_y-14,'stonebricksmooth');
+
+    render(50,max_y-15,'stonebricksmooth');
+    render(51,max_y-15,'stonebricksmooth');
+    render(52,max_y-15,'stonebricksmooth');
+    render(53,max_y-15,'stonebricksmooth');
+    render(54,max_y-15,'stonebricksmooth');
+
+    render(50,max_y-16,'stonebricksmooth');
+    render(51,max_y-16,'stonebricksmooth');
+    render(52,max_y-16,'stonebricksmooth');
+    render(53,max_y-16,'stonebricksmooth');
+    render(54,max_y-16,'stonebricksmooth');
+
+    render(49,max_y-16,'wood_spruce');
+    render(55,max_y-16,'wood_spruce');
+
+    render(52,max_y-17,'bed_feet_side');
+    render(53,max_y-17,'bed_head_side');
+    render(55,max_y-17,'redstoneLight_lit');
+
+
+    render(20,max_y-8,'rose');
+    render(27,max_y-8,'flower');
+    render(30,max_y-8,'mushroom_red');
+    render(37,max_y-8,'crops_7');
+    render(10,max_y-8,'rose');
+    render(16,max_y-8,'rose');
+    render(22,max_y-8,'flower');
+
+    render(40,max_y-15,'stonebricksmooth');
+    render(44,max_y-16,'stonebricksmooth');
 }
 
 function render(x,y,name){
@@ -90,11 +169,11 @@ function gravity(player){
 }
 
 function move_scene(player) {
-    let max_x_id = Math.floor(window.innerWidth/20);
+    let max_x_id = Math.floor(window.innerWidth/20)*scene_id;
 
     if(player.getAttribute('x')>=max_x_id){
         document.querySelector('main').setAttribute('style',document.querySelector('main').getAttribute('style')+' transform: translateX(-'+max_x_id*20+'px);');
-        alert('есть');
+        scene_id++;
     }
 }
 
