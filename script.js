@@ -92,6 +92,7 @@ function move_scene(player) {
 
     if(player.getAttribute('x')>=max_x_id){
         document.querySelector('main').setAttribute('style',document.querySelector('main').getAttribute('style')+' transform: translateX(-'+max_x_id*20+'px);');
+        alert('есть');
     }
 }
 
