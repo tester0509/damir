@@ -33,6 +33,7 @@ function createScene(){
     //document.querySelector('main').style.width = 20*60+'px;';
     //document.querySelector('main').style.height = 'auto';
     document.querySelector('main').setAttribute('style','width:'+20*scene_w+'px; height:auto;')
+    document.querySelector('body').setAttribute('style','position: fixed;');
     render(18,14,'glass');
     render(19,14,'glass');
     render(18,15,'glass');
@@ -40,6 +41,7 @@ function createScene(){
     render(4,24,'brick');
     //render(4,23,'brick');
     //render(4,22,'brick');
+    
 }
 
 function render(x,y,name){
