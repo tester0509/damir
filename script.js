@@ -111,12 +111,12 @@ function createScene(){
     render(55,max_y-17,'redstoneLight_lit');
 
 
-    render(20,max_y-8,'rose');
+    //render(20,max_y-8,'rose');
     render(27,max_y-8,'flower');
     render(30,max_y-8,'mushroom_red');
     render(37,max_y-8,'crops_7');
     render(10,max_y-8,'rose');
-    render(16,max_y-8,'rose');
+    //render(16,max_y-8,'rose');
     render(22,max_y-8,'flower');
 
     render(40,max_y-15,'stonebricksmooth');
